@@ -14,9 +14,10 @@ import java.time.LocalDate;
 @NoArgsConstructor
 @AllArgsConstructor
 public class JobHis {
-    private Integer departmentId; //ID
 
     private Integer employeeId;
+
+    private Integer jobTitleId;
 
     private LocalDate startDate;
 
@@ -24,5 +25,4 @@ public class JobHis {
 
     private Boolean currentStatus;
 
-    private String departmentName; //部门名称
 }

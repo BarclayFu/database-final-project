@@ -17,7 +17,7 @@ public interface JobTitleMapper {
      * 查询全部部门
      * @return
      */
-    @Select("select * from job_titles")
+    @Select("SELECT * FROM job_titles")
     List<JobTitle> list();
 
     /**
