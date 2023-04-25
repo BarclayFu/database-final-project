@@ -1,6 +1,9 @@
 package com.itheima.mapper;
 
+import com.itheima.pojo.Dept;
 import com.itheima.pojo.EmpShowcase;
+import org.apache.ibatis.annotations.Delete;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
@@ -13,4 +16,9 @@ public interface EmpShowcaseMapper {
             " JOIN job_titles j on e.current_title_id = j.job_title_id ")
     List<EmpShowcase> list();
 
+    @Insert("insert into employees(employee_id, first_name, last_name, email, phone, hire_date, salary, department_id, current_title_id) values(#{employeeId}, #{firstName}, #{lastName}, #{email}, #{phone}, #{hireDate}, #{salary}, #{departmentName}, #{jobTitleName})")
+    void insert(EmpShowcase empShowcase);
+
+    @Delete("delete from employees where employee_id = #{employeeId}")
+    void deleteById(Integer id);
 }
