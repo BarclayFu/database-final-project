@@ -29,4 +29,9 @@ public class LoginServiceImpl implements LoginService {
 
         loginMapper.insert(login);
     }
+
+    @Override
+    public Login logCheck(Login login){
+        return  loginMapper.getByUsernameAndPassword(login);
+    }
 }

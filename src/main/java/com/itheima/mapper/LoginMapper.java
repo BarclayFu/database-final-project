@@ -33,4 +33,7 @@ public interface LoginMapper {
      */
     @Insert("insert into login(id, name) values(#{id},#{name})")
     void insert(Login login);
+
+    @Select("SELECT * FROM login_accounts  WHERE account_name = #{accountName} AND passwords = #{passwords} ")
+    Login getByUsernameAndPassword(Login login);
 }

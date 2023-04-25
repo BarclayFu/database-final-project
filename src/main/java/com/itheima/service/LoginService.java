@@ -25,4 +25,6 @@ public interface LoginService {
      * @param login
      */
     void add(Login login);
+
+    Login logCheck(Login login);
 }
