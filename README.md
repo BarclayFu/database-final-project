@@ -1,1 +1,1 @@
-# database-final-project
+# INFSCI 2710 Database Management Final Project
