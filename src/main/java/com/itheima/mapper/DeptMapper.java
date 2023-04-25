@@ -24,13 +24,13 @@ public interface DeptMapper {
      * 根据ID删除部门
      * @param id
      */
-    @Delete("delete from departments where dept_no = #{id}")
+    @Delete("delete from departments where department_id = #{departmentId}")
     void deleteById(Integer id);
 
     /**
      * 新增部门
      * @param dept
      */
-    @Insert("insert into dept(id, name) values(#{id},#{name})")
+    @Insert("insert into departments(department_id, department_name) values(#{departmentId},#{departmentName})")
     void insert(Dept dept);
 }
