@@ -34,29 +34,4 @@ public class LoginController {
         return Result.success(loginList);
     }
 
-
-    /**
-     * 删除部门
-     * @return
-     */
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
-        //调用service删除部门
-        loginService.delete(id);
-        return Result.success();
-    }
-
-
-    /**
-     * 新增部门
-     * @return
-     */
-    @PostMapping
-    public Result add(@RequestBody Login dept){
-        log.info("新增部门: {}" , dept);
-        //调用service新增部门
-        loginService.add(dept);
-        return Result.success();
-    }
 }

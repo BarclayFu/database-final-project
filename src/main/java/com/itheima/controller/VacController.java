@@ -17,15 +17,10 @@ import java.util.List;
 @RestController
 public class VacController {
 
-    //private static Logger log = LoggerFactory.getLogger(DeptController.class);
+
     @Autowired
     private VacService vacService;
 
-    /**
-     * 查询部门数据
-     * @return
-     */
-    //@RequestMapping(value = "/vac",method = RequestMethod.GET) //指定请求方式为GET
     @GetMapping
     public Result list(){
         log.info("查询全部部门数据");
@@ -35,10 +30,6 @@ public class VacController {
     }
 
 
-    /**
-     * 删除部门
-     * @return
-     */
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("根据id删除部门:{}",id);
@@ -48,10 +39,6 @@ public class VacController {
     }
 
 
-    /**
-     * 新增部门
-     * @return
-     */
     @PostMapping
     public Result add(@RequestBody Vac vac){
         log.info("新增部门: {}" , vac);

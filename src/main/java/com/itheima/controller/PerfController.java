@@ -48,15 +48,4 @@ public class PerfController {
     }
 
 
-//    /**
-//     * 新增部门
-//     * @return
-//     */
-//    @PostMapping
-//    public Result add(@RequestBody Perf perf){
-//        log.info("新增部门: {}" , perf);
-//        //调用service新增部门
-//        perfService.add(perf);
-//        return Result.success();
-//    }
 }

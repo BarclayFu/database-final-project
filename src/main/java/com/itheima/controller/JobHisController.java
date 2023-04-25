@@ -17,15 +17,10 @@ import java.util.List;
 @RestController
 public class JobHisController {
 
-    //private static Logger log = LoggerFactory.getLogger(JobHisController.class);
+
     @Autowired
     private JobHisService jobHisService;
 
-    /**
-     * 查询部门数据
-     * @return
-     */
-    //@RequestMapping(value = "/jobhis",method = RequestMethod.GET) //指定请求方式为GET
     @GetMapping
     public Result list(){
         log.info("查询全部部门数据");

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @Slf4j
-@RequestMapping("/empshow")
+@RequestMapping("/empdata")
 @RestController
 public class EmpShowcaseController {
     @Autowired
