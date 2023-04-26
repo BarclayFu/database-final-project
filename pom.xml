@@ -8,10 +8,11 @@
         <version>2.7.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.itheima</groupId>
-    <artifactId>tlias-web-management</artifactId>
+    <groupId>com.databaseFinal</groupId>
+    <artifactId>web-management</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tlias-web-management</name>
+    <packaging>war</packaging>
+    <name>web-management</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
