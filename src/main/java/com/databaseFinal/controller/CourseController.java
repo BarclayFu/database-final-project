@@ -9,14 +9,11 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/course")
 @RestController
 public class CourseController {
-
 
     @Autowired
     private CourseService courseService;
@@ -28,7 +25,6 @@ public class CourseController {
         List<Course> deptList =  courseService.list();
         return Result.success(deptList);
     }
-
 
 
     @DeleteMapping("/{id}")

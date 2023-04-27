@@ -42,7 +42,6 @@ com/databaseFinal/service/JobHisService.class
 com/databaseFinal/service/impl/TimeServiceImpl.class
 com/databaseFinal/service/DeptService.class
 com/databaseFinal/service/CourseService.class
-com/databaseFinal/controller/UploadController.class
 com/databaseFinal/mapper/EmpShowcaseMapper.class
 com/databaseFinal/pojo/PageBean.class
 com/databaseFinal/service/VacService.class
