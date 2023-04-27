@@ -26,7 +26,6 @@ public class EmpShowcaseController {
     @PostMapping
     public Result add(@RequestBody EmpShowcase empShowcase){
         log.info("Add new employee" , empShowcase);
-        //调用service新增部门
         empShowCaseService.add(empShowcase);
         return Result.success();
     }
@@ -34,7 +33,6 @@ public class EmpShowcaseController {
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("Delete employee by id",id);
-        //调用service删除部门
         empShowCaseService.delete(id);
         return Result.success();
     }

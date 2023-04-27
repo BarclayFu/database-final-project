@@ -22,8 +22,7 @@ public class PerfController {
 
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
-        //调用service查询部门数据
+        log.info("Show all performance record");
         List<Perf> perfList =  perfService.list();
         return Result.success(perfList);
     }
@@ -31,7 +30,7 @@ public class PerfController {
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete performance record by id",id);
         //调用service删除部门
         perfService.delete(id);
         return Result.success();
