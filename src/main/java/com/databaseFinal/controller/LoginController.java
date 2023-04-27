@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/login")
 @RestController
+@CrossOrigin
 public class LoginController {
 
     @Autowired

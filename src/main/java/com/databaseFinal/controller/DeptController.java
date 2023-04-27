@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/depts")
 @RestController
+@CrossOrigin
 public class DeptController {
 
 

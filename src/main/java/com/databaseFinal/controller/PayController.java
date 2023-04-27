@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/pay")
 @RestController
+@CrossOrigin
 public class PayController {
 
     @Autowired

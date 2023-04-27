@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/time")
 @RestController
+@CrossOrigin
 public class TimeController {
 
 

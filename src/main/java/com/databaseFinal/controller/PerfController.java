@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/perf")
 @RestController
+@CrossOrigin
 public class PerfController {
 
 

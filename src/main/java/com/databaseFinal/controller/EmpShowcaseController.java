@@ -12,6 +12,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/empdata")
 @RestController
+@CrossOrigin
 public class EmpShowcaseController {
     @Autowired
     private EmpShowCaseService empShowCaseService;

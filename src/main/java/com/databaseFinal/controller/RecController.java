@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/recs")
 @RestController
+@CrossOrigin
 public class RecController {
 
     @Autowired
