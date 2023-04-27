@@ -9,23 +9,17 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/perf")
 @RestController
 public class PerfController {
 
-    //private static Logger log = LoggerFactory.getLogger(DeptController.class);
+
     @Autowired
     private PerfService perfService;
 
-    /**
-     * 查询部门数据
-     * @return
-     */
-    //@RequestMapping(value = "/depts",method = RequestMethod.GET) //指定请求方式为GET
+
     @GetMapping
     public Result list(){
         log.info("查询全部部门数据");
@@ -35,10 +29,6 @@ public class PerfController {
     }
 
 
-    /**
-     * 删除部门
-     * @return
-     */
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("根据id删除部门:{}",id);

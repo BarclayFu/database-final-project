@@ -27,11 +27,9 @@ public class TimeController {
     }
 
 
-
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
         log.info("Delete timesheets by id",id);
-        //调用service删除部门
         timeService.delete(id);
         return Result.success();
     }

@@ -29,7 +29,7 @@ public class CourseController {
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete course by id:{}",id);
         //调用service删除部门
         courseService.delete(id);
         return Result.success();
@@ -39,7 +39,7 @@ public class CourseController {
 
     @PostMapping
     public Result add(@RequestBody Course dept){
-        log.info("新增部门: {}" , dept);
+        log.info("Add course" , dept);
         //调用service新增部门
         courseService.add(dept);
         return Result.success();

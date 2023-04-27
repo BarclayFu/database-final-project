@@ -9,22 +9,18 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/vac")
 @RestController
 public class VacController {
-
 
     @Autowired
     private VacService vacService;
 
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
-        //调用service查询部门数据
+        log.info("Get all vacation records");
         List<Vac> vacList =  vacService.list();
         return Result.success(vacList);
     }
@@ -32,7 +28,7 @@ public class VacController {
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete vacation record by id",id);
         //调用service删除部门
         vacService.delete(id);
         return Result.success();
