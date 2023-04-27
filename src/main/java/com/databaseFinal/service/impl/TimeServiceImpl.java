@@ -26,7 +26,11 @@ public class TimeServiceImpl implements TimeService {
 
     @Override
     public void add(Time time) {
-
         timeMapper.insert(time);
+    }
+
+    @Override
+    public void update(Time time){
+        timeMapper.update(time);
     }
 }

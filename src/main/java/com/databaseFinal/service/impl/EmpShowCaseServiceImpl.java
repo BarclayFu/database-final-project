@@ -25,4 +25,7 @@ public class EmpShowCaseServiceImpl implements EmpShowCaseService{
     public void delete(Integer id) {
         empShowcaseMapper.deleteById(id);
     }
+
+    @Override
+    public void update(EmpShowcase empShowcase){empShowcaseMapper.update(empShowcase);}
 }

@@ -18,14 +18,14 @@ public class EmpShowcaseController {
 
     @GetMapping
     public Result list(){
-        log.info("返回员工数据");
+        log.info("Get all employees");
         List<EmpShowcase> empShowList =  empShowCaseService.list();
         return Result.success(empShowList);
     }
 
     @PostMapping
     public Result add(@RequestBody EmpShowcase empShowcase){
-        log.info("新增部门: {}" , empShowcase);
+        log.info("Add new employee" , empShowcase);
         //调用service新增部门
         empShowCaseService.add(empShowcase);
         return Result.success();
@@ -33,9 +33,16 @@ public class EmpShowcaseController {
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete employee by id",id);
         //调用service删除部门
         empShowCaseService.delete(id);
+        return Result.success();
+    }
+
+    @PutMapping
+    public Result update(@RequestBody EmpShowcase empShowcase){
+        log.info("Update employee information", empShowcase);
+        empShowCaseService.update(empShowcase);
         return Result.success();
     }
 }

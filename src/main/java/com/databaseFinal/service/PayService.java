@@ -25,4 +25,6 @@ public interface PayService {
      * @param pay
      */
     void add(Pay pay);
+
+    void update(Pay pay);
 }

@@ -9,54 +9,45 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/time")
 @RestController
 public class TimeController {
 
-    //private static Logger log = LoggerFactory.getLogger(TimeController.class);
+
     @Autowired
     private TimeService timeService;
 
-    /**
-     * 查询部门数据
-     * @return
-     */
-    //@RequestMapping(value = "/time",method = RequestMethod.GET) //指定请求方式为GET
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
-        //调用service查询部门数据
+        log.info("Get all timesheets");
         List<Time> timeList =  timeService.list();
         return Result.success(timeList);
     }
 
 
-    /**
-     * 删除部门
-     * @return
-     */
+
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete timesheets by id",id);
         //调用service删除部门
         timeService.delete(id);
         return Result.success();
     }
 
-
-    /**
-     * 新增部门
-     * @return
-     */
     @PostMapping
     public Result add(@RequestBody Time time){
-        log.info("新增部门: {}" , time);
+        log.info("Add new timesheet" , time);
         //调用service新增部门
         timeService.add(time);
+        return Result.success();
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Time time){
+        log.info("Update timesheet", time);
+        timeService.update(time);
         return Result.success();
     }
 }

@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/depts")
 @RestController
@@ -21,11 +19,9 @@ public class DeptController {
     @Autowired
     private DeptService deptService;
 
-
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
-        //调用service查询部门数据
+        log.info("Get All departments");
         List<Dept> deptList =  deptService.list();
         return Result.success(deptList);
     }
@@ -33,17 +29,22 @@ public class DeptController {
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
-        //调用service删除部门
+        log.info("Delete department by id",id);
         deptService.delete(id);
         return Result.success();
     }
 
     @PostMapping
     public Result add(@RequestBody Dept dept){
-        log.info("新增部门: {}" , dept);
-        //调用service新增部门
+        log.info("Add new department" , dept);
         deptService.add(dept);
+        return Result.success();
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Dept dept){
+        log.info("Update department",dept);
+        deptService.update(dept);
         return Result.success();
     }
 }

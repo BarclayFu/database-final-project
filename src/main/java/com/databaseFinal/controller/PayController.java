@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 部门管理Controller
- */
+
 @Slf4j
 @RequestMapping("/pay")
 @RestController
@@ -21,42 +19,38 @@ public class PayController {
     @Autowired
     private PayService payService;
 
-    /**
-     * 查询部门数据
-     * @return
-     */
-    //@RequestMapping(value = "/pay",method = RequestMethod.GET) //指定请求方式为GET
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
+        log.info("Get all payroll records");
         //调用service查询部门数据
         List<Pay> payList =  payService.list();
         return Result.success(payList);
     }
 
 
-    /**
-     * 删除部门
-     * @return
-     */
+
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
+        log.info("Delete payroll record by id",id);
         //调用service删除部门
         payService.delete(id);
         return Result.success();
     }
 
 
-    /**
-     * 新增部门
-     * @return
-     */
+
     @PostMapping
-    public Result add(@RequestBody Pay dept){
-        log.info("新增部门: {}" , dept);
+    public Result add(@RequestBody Pay pay){
+        log.info("Add new payroll record" , pay);
         //调用service新增部门
-        payService.add(dept);
+        payService.add(pay);
+        return Result.success();
+    }
+
+    @PutMapping
+    public Result update(@RequestBody Pay pay){
+        log.info("Update payroll record", pay);
+        payService.update(pay);
         return Result.success();
     }
 }

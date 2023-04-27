@@ -25,4 +25,6 @@ public interface TimeService {
      * @param time
      */
     void add(Time time);
+
+    void update(Time time);
 }

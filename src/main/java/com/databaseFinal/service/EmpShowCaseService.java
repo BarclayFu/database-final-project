@@ -8,4 +8,6 @@ public interface EmpShowCaseService {
     List<EmpShowcase> list();
     void add(EmpShowcase empShowcase);
     void delete(Integer id);
+
+    void update(EmpShowcase empShowcase);
 }
