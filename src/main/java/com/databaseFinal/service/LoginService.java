@@ -10,10 +10,5 @@ public interface LoginService {
     List<Login> list();
 
 
-    void delete(Integer id);
-
-
-    void add(Login login);
-
     Login logCheck(Login login);
 }

@@ -20,17 +20,6 @@ public class LoginServiceImpl implements LoginService {
     }
 
     @Override
-    public void delete(Integer id) {
-        loginMapper.deleteById(id);
-    }
-
-    @Override
-    public void add(Login login) {
-
-        loginMapper.insert(login);
-    }
-
-    @Override
     public Login logCheck(Login login){
         return  loginMapper.getByUsernameAndPassword(login);
     }

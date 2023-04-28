@@ -1,8 +1,16 @@
 # INFSCI 2710 Database Management Final Project
 
-## GET
+### Team members: shiyuan luo(shl298), sizhe fu(sif33)
 
-### 1. Get all employees' data
+### How to run the project
+- run the WebManagementApplication.java
+- open postman using http://localhost:8080
+
+## API documentation
+
+### GET
+
+### 1. Get all employees' data(show readable data by join several tables together)
 #### URL: `/empdata`
 #### Example of API response:
 ```json
@@ -156,7 +164,7 @@
 }
 ```
 
-### 3.Get all courses
+### 3. Get all courses
 ### URL: `/course`
 #### Example of API response:
 ```json
@@ -679,5 +687,248 @@
             "status": "Pending"
         }
     ]
+}
+```
+
+### POST
+
+### 1. Determine whether login successfully with correct account name and passwords
+#### URL: `/login`
+#### JSON payloads:
+```json
+{
+    "accountName": "sophia.admin",
+    "passwords": "admin123"
+}
+```
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "loginAccountId": 1,
+        "permission": "admin",
+        "employeeId": 6,
+        "accountName": "sophia.admin",
+        "passwords": "admin123"
+    }
+}
+```
+
+### 2. Insert new employee data
+#### URL: `/empdata`
+#### JSON payloads:
+```json
+{
+  "employeeId": 111,
+  "firstName": "L",
+  "lastName": "S",
+  "email": "smith@example.com",
+  "phone": "123-456-8888",
+  "hireDate": "2022-01-01",
+  "salary": 90000.0,
+  "departmentName": 1,
+  "jobTitleName": 2
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### 3. Insert new department
+#### URL: `/empdata`
+#### JSON payloads:
+```json
+{
+    "departmentId": 6,
+    "departmentName": "balabal"
+}
+```
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": null
+}
+```
+
+### 4. Insert new payroll record
+#### URL: `/pay`
+#### JSON payloads:
+```json
+{
+  "payrollId": 1,
+  "employeeId": 1,
+  "payDate": "2023-03-31",
+  "grossPay": 8000.0
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### 5. Insert new timesheet record
+#### URL: `/time`
+#### JSON payloads:
+```json
+{
+  "timesheetId": 11,
+  "employeeId": 1,
+  "countDate": "2023-03-31",
+  "regularHours": 120,
+  "overtimeHours": 30
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### PUT
+
+### 1. Update a employee
+#### URL: `/empdata`
+#### JSON payloads:
+```json
+{
+  "employeeId": 111,
+  "firstName": "L",
+  "lastName": "S",
+  "email": "smith@example.com",
+  "phone": "123-666-8888",
+  "hireDate": "2022-01-01",
+  "salary": 90000.0,
+  "departmentName": 1,
+  "jobTitleName": 2
+}
+```
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": null
+}
+```
+
+### 2. Update a department
+#### URL: `/depts`
+#### JSON payloads:
+```json
+{
+  "departmentId": 6,
+  "departmentName": "baxixi"
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### 3. Update a payroll record
+#### URL: `/pay`
+#### JSON payloads:
+```json
+{
+  "payrollId": 1,
+  "employeeId": 1,
+  "payDate": "2023-03-31",
+  "grossPay": 9000.0
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### 4. Update a timesheet record
+#### URL: `/time`
+#### JSON payloads:
+```json
+{
+  "timesheetId": 11,
+  "employeeId": 1,
+  "countDate": "2023-03-31",
+  "regularHours": 100,
+  "overtimeHours": 30
+}
+```
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### Delete
+
+### 1. Delete a employee
+#### URL: `/empdata/:id`
+#### Example of API response:
+```json
+{
+  "code": 1,
+  "msg": "success",
+  "data": null
+}
+```
+
+### 2. Delete a department based on the id
+#### URL: `/depts/:id`
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": null
+}
+```
+
+### 3. Delete a payroll record based on the id
+#### URL: `/pay/:id`
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": null
+}
+```
+
+
+### 4. Delete a timesheet record based on the id
+#### URL: `/time/:id`
+#### Example of API response:
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": null
 }
 ```
