@@ -19,14 +19,4 @@ public class JobHisServiceImpl implements JobHisService {
         return jobHisMapper.list();
     }
 
-//    @Override
-//    public void delete(Integer id) {
-//        jobHisMapper.deleteById(id);
-//    }
-//
-//    @Override
-//    public void add(JobHis job) {
-//
-//        jobHisMapper.insert(job);
-//    }
 }

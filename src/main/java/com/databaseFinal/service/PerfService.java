@@ -10,6 +10,4 @@ public interface PerfService {
     List<Perf> list();
 
 
-    void delete(Integer id);
-
 }

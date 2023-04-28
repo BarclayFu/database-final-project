@@ -26,21 +26,4 @@ public class VacController {
         return Result.success(vacList);
     }
 
-
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
-        log.info("Delete vacation record by id",id);
-        //调用service删除部门
-        vacService.delete(id);
-        return Result.success();
-    }
-
-
-    @PostMapping
-    public Result add(@RequestBody Vac vac){
-        log.info("新增部门: {}" , vac);
-        //调用service新增部门
-        vacService.add(vac);
-        return Result.success();
-    }
 }

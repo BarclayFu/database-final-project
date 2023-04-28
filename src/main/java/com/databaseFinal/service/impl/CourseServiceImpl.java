@@ -19,14 +19,4 @@ public class CourseServiceImpl implements CourseService {
         return courseMapper.list();
     }
 
-    @Override
-    public void delete(Integer id) {
-        courseMapper.deleteById(id);
-    }
-
-    @Override
-    public void add(Course course) {
-
-        courseMapper.insert(course);
-    }
 }

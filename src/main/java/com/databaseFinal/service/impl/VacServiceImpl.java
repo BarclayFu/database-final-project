@@ -19,14 +19,4 @@ public class VacServiceImpl implements VacService {
         return vacMapper.list();
     }
 
-    @Override
-    public void delete(Integer id) {
-        vacMapper.deleteById(id);
-    }
-
-    @Override
-    public void add(Vac dept) {
-
-        vacMapper.insert(dept);
-    }
 }

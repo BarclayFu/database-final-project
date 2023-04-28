@@ -22,24 +22,8 @@ public class RecController {
 
     @GetMapping
     public Result list(){
-        log.info("查询全部部门数据");
         List<Rec> recList =  recService.list();
         return Result.success(recList);
     }
 
-
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
-        log.info("根据id删除部门:{}",id);
-        recService.delete(id);
-        return Result.success();
-    }
-
-
-    @PostMapping
-    public Result add(@RequestBody Rec rec){
-        log.info("新增部门: {}" , rec);
-        recService.add(rec);
-        return Result.success();
-    }
 }

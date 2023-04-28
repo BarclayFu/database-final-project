@@ -15,10 +15,4 @@ public interface VacMapper {
     @Select("select * from vacation_requests")
     List<Vac> list();
 
-    @Delete("delete from vacation_requests where request_id = #{id}")
-    void deleteById(Integer id);
-
-
-    @Insert("insert into vac(id, name) values(#{id},#{name})")
-    void insert(Vac vac);
 }

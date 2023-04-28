@@ -19,14 +19,4 @@ public class JobTitleServiceImpl implements JobTitleService {
         return jobTitleMapper.list();
     }
 
-    @Override
-    public void delete(Integer id) {
-        jobTitleMapper.deleteById(id);
-    }
-
-    @Override
-    public void add(JobTitle job) {
-
-        jobTitleMapper.insert(job);
-    }
 }

@@ -13,10 +13,4 @@ public interface CourseMapper {
 
     @Select("select * from training_courses")
     List<Course> list();
-
-    @Delete("delete from training_courses where course_id = #{id}")
-    void deleteById(Integer id);
-
-    @Insert("insert into Course(id, name) values(#{id},#{name})")
-    void insert(Course course);
 }

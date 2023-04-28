@@ -38,7 +38,6 @@ public class TimeController {
     @PostMapping
     public Result add(@RequestBody Time time){
         log.info("Add new timesheet" , time);
-        //调用service新增部门
         timeService.add(time);
         return Result.success();
     }

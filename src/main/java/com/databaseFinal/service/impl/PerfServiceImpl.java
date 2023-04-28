@@ -19,14 +19,4 @@ public class PerfServiceImpl implements PerfService {
         return perfMapper.list();
     }
 
-    @Override
-    public void delete(Integer id) {
-        perfMapper.deleteById(id);
-    }
-
-//    @Override
-//    public void add(Perf perf) {
-//
-//        perfMapper.insert(perf);
-//    }
 }

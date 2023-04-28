@@ -18,15 +18,4 @@ public class RecServiceImpl implements RecService {
     public List<Rec> list() {
         return recMapper.list();
     }
-
-    @Override
-    public void delete(Integer id) {
-        recMapper.deleteById(id);
-    }
-
-    @Override
-    public void add(Rec rec) {
-
-        recMapper.insert(rec);
-    }
 }

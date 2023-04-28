@@ -15,7 +15,4 @@ public interface PerfMapper {
     List<Perf> list();
 
 
-    @Delete("delete from performance_reviews where review_id = #{id}")
-    void deleteById(Integer id);
-
 }

@@ -26,21 +26,4 @@ public class CourseController {
         List<Course> deptList =  courseService.list();
         return Result.success(deptList);
     }
-
-
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
-        log.info("Delete course by id:{}",id);
-        courseService.delete(id);
-        return Result.success();
-    }
-
-
-
-    @PostMapping
-    public Result add(@RequestBody Course dept){
-        log.info("Add course" , dept);
-        courseService.add(dept);
-        return Result.success();
-    }
 }

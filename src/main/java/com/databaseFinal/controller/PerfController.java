@@ -29,13 +29,4 @@ public class PerfController {
     }
 
 
-    @DeleteMapping("/{id}")
-    public Result delete(@PathVariable Integer id){
-        log.info("Delete performance record by id",id);
-        //调用service删除部门
-        perfService.delete(id);
-        return Result.success();
-    }
-
-
 }
