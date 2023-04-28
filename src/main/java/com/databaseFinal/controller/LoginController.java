@@ -31,7 +31,7 @@ public class LoginController {
     public Result login(@RequestBody Login login){
         log.info("Log in: ", login);
         Login l = loginService.logCheck(login);
-        return l!=null ? Result.success():Result.error("Failed!");
+        return l!=null ? Result.success(l):Result.error("Failed!");
 
     }
 
