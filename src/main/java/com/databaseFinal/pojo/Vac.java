@@ -7,14 +7,11 @@ import lombok.NoArgsConstructor;
 import java.time.LocalDate;
 
 
-/**
- * 部门实体类
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Vac {
-    private Integer requestId; //ID
+    private Integer requestId;
 
     private Integer employeeId;
 

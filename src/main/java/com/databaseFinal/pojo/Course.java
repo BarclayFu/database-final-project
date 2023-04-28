@@ -5,9 +5,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 
-/**
- * 部门实体类
- */
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
