@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/course")
 @RestController
+@CrossOrigin
 public class CourseController {
 
     @Autowired

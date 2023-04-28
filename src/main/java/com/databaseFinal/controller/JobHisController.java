@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/jobhis")
 @RestController
+@CrossOrigin
 public class JobHisController {
 
     @Autowired

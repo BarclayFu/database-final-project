@@ -12,6 +12,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/jobtitles")
 @RestController
+@CrossOrigin
 public class JobTitleController {
 
     @Autowired

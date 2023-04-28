@@ -13,6 +13,7 @@ import java.util.List;
 @Slf4j
 @RequestMapping("/vac")
 @RestController
+@CrossOrigin
 public class VacController {
 
     @Autowired
