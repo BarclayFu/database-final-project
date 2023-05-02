@@ -18,5 +18,4 @@ public class EmpShowcase {
     private Double salary;
     private String departmentName;
     private String jobTitleName;
-
 }
